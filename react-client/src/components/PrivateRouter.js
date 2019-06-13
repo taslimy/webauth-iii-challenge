@@ -12,7 +12,7 @@ const PrivateRoute = ({ component: Component, errorStatusCode, ...rest }) => {
     <Route
       {...rest}
       render={props =>
-        localStorage.getItem("token", "userId") && errorStatusCode !== 403 ? (
+        localStorage.getItem("token", "username") && errorStatusCode !== 403 ? (
           <Component {...props} />
         ) : (
           <Redirect to="/login" />

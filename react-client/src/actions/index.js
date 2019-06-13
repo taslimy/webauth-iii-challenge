@@ -19,7 +19,6 @@ export const login = creds => dispatch => {
     .then(res => {
       console.log(res);
        localStorage.setItem("token", res.data.token);
-      localStorage.setItem("userId", res.data.id);
       dispatch({
         type: LOGIN_SUCCESS,
         payload: res.data.id
@@ -60,5 +59,33 @@ export const register = cred => dispatch => {
         type: REGISTER_FAILURE,
         payload: err
       });
+    });
+};
+
+
+// U S E R L I S T
+
+export const USER_START = "USER_START";
+export const USER_SUCCESS = "USER_SUCCESS";
+export const USER_FAILURE = "USER_FAILURE";
+export const USER_UNAUTHORIZED = "USER_FAILURE";
+
+export const getUser = () => dispatch => {
+  dispatch({ type: USER_START });
+  return axios
+    .get(`http://localhost:5000/api/users/`, {
+      headers: { Authorization: localStorage.getItem("token") }
+    })
+    .then(res => {
+      console.log(res.data);
+      dispatch({ type: USER_SUCCESS, payload: res.data });
+    })
+    .catch(err => {
+      console.table("call failed", err.reponse);
+      if (err.response.status === 403) {
+        dispatch({ type: USER_UNAUTHORIZED, payload: err.reponse });
+      } else {
+        dispatch({ type: USER_FAILURE, payload: err.reponse });
+      }
     });
 };

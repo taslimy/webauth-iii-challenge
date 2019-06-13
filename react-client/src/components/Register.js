@@ -26,7 +26,7 @@ class RegisterPage extends Component {
   register = e => {
     e.preventDefault();
     this.props.register(this.state.newCredentials).then(() => {
-      this.props.history.push("/login");
+      this.props.history.push("/");
     });
   };
 

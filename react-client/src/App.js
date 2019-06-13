@@ -38,9 +38,6 @@ class App extends Component {
             ) : (
               <Fragment>
                 <NavLink activeClassName="active" to="/">
-                  Home
-                </NavLink>
-                <NavLink activeClassName="active" to="/login">
                   Login
                 </NavLink>
                 <NavLink activeClassName="active" to="/register">
@@ -50,7 +47,7 @@ class App extends Component {
             )}
           </ul>
         </nav>
-        <Route exact path="/login" component={Login} />
+        <Route exact path="/" component={Login} />
         <Route exact path="/register" component={Register} />
         <PrivateRouter exact path="/users" component={Users} />
       </div>

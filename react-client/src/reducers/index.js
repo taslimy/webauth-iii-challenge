@@ -3,14 +3,19 @@ import {
   LOGIN_SUCCESS,
   LOGIN_FAILURE,
   REGISTER_START,
-  REGISTER_SUCCESS
+  REGISTER_SUCCESS,
+  USER_START,
+  USER_SUCCESS
 } from "../actions";
 
 const initialState = {
   loggingIn: false,
   isLoggedIn: false,
   error: "",
-  errorStatusCode: null
+  errorStatusCode: null,
+
+  users: [],
+  fetchingUsers: false
 };
 
 const reducer = (state = initialState, action) => {
@@ -46,6 +51,20 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         isLoggedIn: true
+      };
+    // U S E R L I S T
+    case USER_START:
+      return {
+        ...state,
+        fetchingParties: true
+      };
+    case USER_SUCCESS:
+      return {
+        ...state,
+        error: "",
+        errorStatusCode: null,
+        isLoggedIn: true,
+        users: action.payload
       };
     default:
       return state;
