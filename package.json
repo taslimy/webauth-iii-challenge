@@ -6,7 +6,7 @@
   "scripts": {
     "server": "nodemon index.js",
     "start": "node index.js",
-    "client": "npm start --prefix react-app",
+    "client": "npm start --prefix react-client",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "repository": {
