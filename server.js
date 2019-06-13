@@ -5,10 +5,16 @@ const bcrypt = require("bcryptjs");
 
 const server = express();
 
+
+const corsOptions = {
+  credentials: true,
+  origin: "http://localhost:3000"
+};
+
 server.use(express());
 server.use(express.json());
 server.use(helmet());
-server.use(cors());
+server.use(cors(corsOptions));
 server.use(logger);
 
 server.get("/", (req, res) => {

@@ -1,0 +1,211 @@
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.error {
+  font-size: 12px;
+  color: white;
+  padding: 4px;
+  width: calc(100% - 16px);
+  border-radius: 12px;
+  border: 1px solid #e67373;
+  margin: 8px auto 6px;
+  background-color: #f98484;
+}
+
+.App {
+  height: 100%;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+}
+
+nav {
+  margin-bottom: 1rem;
+}
+
+ul {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+li {
+  list-style: none;
+  margin-right: 6px;
+}
+
+a {
+  text-decoration: none;
+  padding: 6px;
+  color: #111111;
+}
+
+.login-form {
+  width: 100%;
+  height: 100%;
+  background-size: auto 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: #fff;
+  padding: 2em;
+  padding-bottom: 2em;
+  padding-bottom: 3em;
+  border-radius: 0px;
+  width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid #e7e7e7;
+}
+
+form > label {
+  align-self: flex-start;
+  color: #ffffff;
+  font-size: 12px;
+  margin-bottom: -6px;
+}
+
+.edit-form {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 16px;
+}
+
+.edit-form > label {
+  color: var(--dark-blue);
+}
+
+form > input {
+  font-size: 16px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 4px;
+  padding: 1em;
+  margin-bottom: 1.2em;
+  color: #445048;
+  background: #e8eeef;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+  width: 360px;
+}
+
+.edit-form > input {
+  color: #445048;
+  background: #e8eeef;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+  border: none;
+  border-radius: 4px;
+  padding: 1em;
+  margin-bottom: 1.2em;
+  width: 100%;
+  border: 1px solid var(--dark-blue);
+}
+
+::placeholder {
+  color: #bdbdbd;
+}
+
+input:focus,
+input:active {
+  outline: none;
+}
+
+.flex-spacer {
+  flex-grow: 1;
+}
+
+form > .button {
+  font-weight: 600;
+  text-align: center;
+  font-size: 19px;
+  color: #ffffff;
+  background: linear-gradient(
+    120deg,
+    rgb(132, 250, 176, 0.45),
+    rgb(89, 218, 184, 0.45)
+  );
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+  padding: 0.8em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  overflow: hidden;
+  transition: all 200ms ease-in-out;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+form > .button:hover {
+  background: #1f2a38;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.edit-form > button {
+  border: none;
+}
+
+.WelcomePage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.PartyCard {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 5rem;
+  background: whitesmoke;
+  padding: 50px;
+  width: 100%;
+}
+
+.EditCard {
+  display: flex;
+  flex-direction: column;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.ui.ribbon.label {
+  left: calc(0rem - 0.99999999em) !important;
+  margin-right: -1.2em;
+  padding-left: calc(1rem + 1.2em);
+  padding-right: 1.2em;
+}
+
+.extra-margin-left {
+  margin-left: 2rem;
+}
+
+.event-title {
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 1.1rem;
+  letter-spacing: 4px;
+}
+
+.align-middle {
+  margin: 0 auto;
+}
+
+.active {
+  color: #1e70bf;
+}

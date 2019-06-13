@@ -3,8 +3,7 @@ import {
   LOGIN_SUCCESS,
   LOGIN_FAILURE,
   REGISTER_START,
-  REGISTER_SUCCESS,
-
+  REGISTER_SUCCESS
 } from "../actions";
 
 const initialState = {
